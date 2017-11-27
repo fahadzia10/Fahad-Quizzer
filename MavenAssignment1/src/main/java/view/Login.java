@@ -13,9 +13,10 @@ import model.User;
 
 public class Login extends javax.swing.JFrame{
 
-    TeacherView t;
+    TeacherView t; //Both views declared as variables, defined later
     StudentView s;
-    public Login(){
+    
+    public Login(){ //Constructor initializes all graphical elements
         initComponents();
     }
     
@@ -24,7 +25,6 @@ public class Login extends javax.swing.JFrame{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jColorChooser1 = new javax.swing.JColorChooser();
         usernameField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -133,8 +133,7 @@ public class Login extends javax.swing.JFrame{
     }//GEN-LAST:event_usernameFieldActionPerformed
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        // TODO add your handling code here:
-        if (!usernameField.getText().equals("abc") || !passwordField.getText().equals("abc")){
+        if (!usernameField.getText().equals("abc") || !passwordField.getText().equals("abc")){ 
             errorLabel.setText("Invalid username or password!");
         }
         else{
@@ -199,7 +198,6 @@ public class Login extends javax.swing.JFrame{
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -211,7 +209,6 @@ public class Login extends javax.swing.JFrame{
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel errorLabel;
-    private javax.swing.JColorChooser jColorChooser1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
